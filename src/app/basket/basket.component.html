@@ -1,0 +1,59 @@
+<div class="sidebar">
+  <div class="basket-container">
+    <h2>Warenkorb</h2>
+
+    <table class="basket" *ngIf="basket.length == 0">
+      <tr>
+        <td><i>leer</i></td>
+      </tr>
+    </table>
+
+    <table class="basket" *ngIf="basket.length > 0">
+      <tr *ngFor="let item of basket; let i = index">
+        <td>{{ item.amount }}x</td>
+        <td>{{ item.name }}</td>
+        <td>
+          <button class="controlButton" (click)="storage.decrease(i)">-</button>
+        </td>
+        <td>
+          <button class="controlButton" (click)="storage.increase(i)">+</button>
+        </td>
+        <td>{{ item.price }}</td>
+        <td>
+          <img
+            id="delIcon"
+            src="assets/img/trash.svg"
+            (click)="storage.delete(i)"
+            alt="image_delete"
+          />
+        </td>
+      </tr>
+    </table>
+
+    <hr />
+    <table class="totalCosts">
+      <tr>
+        <th class="font-regular">Zwischensumme</th>
+        <td id="total">{{ formatToCurrency(calcTotal()) }}</td>
+      </tr>
+      <tr>
+        <th class="font-regular">Lieferkosten</th>
+        <td id="deliveryCosts">{{ formatToCurrency(deliveryPrice) }}</td>
+      </tr>
+      <tr>
+        <th class="font-bold">Gesamt</th>
+        <td id="finalTotal" class="font-bold">
+          {{ formatToCurrency(calcFinalTotal()) }}
+        </td>
+      </tr>
+      <tr id="row-minTotal">
+        <th class="font-bold">Mindestbestellwert</th>
+        <td id="minTotal">{{ formatToCurrency(minPrice) }}</td>
+      </tr>
+    </table>
+    <hr />
+    <button id="btn-submitOrder" class="button w-full" (click)="sendOrder()">
+      Bestellen
+    </button>
+  </div>
+</div>

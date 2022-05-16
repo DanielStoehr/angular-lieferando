@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lieferando-fb11f": {
+      "hosting": {
+        "angular-lieferando": [
+          "lieferando-fb11f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lieferando-fb11f"
+  }
+}

@@ -1,0 +1,49 @@
+h1 {
+  font-size: 36px;
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+nav {
+  padding: 10px;
+  background-color: #ff8000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  object-fit: contain;
+}
+
+#menuImage {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+#flag {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+#flag img {
+  height: 70%;
+  width: 70%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+#menu-right {
+  display: flex;
+}

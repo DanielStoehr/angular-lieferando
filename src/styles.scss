@@ -1,1 +1,134 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  src: url("assets/fonts/Raleway-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+.font-white {
+  color: white;
+}
+
+.font-regular {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.teaser-image {
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-success {
+  color: green;
+}
+
+.color-error {
+  color: red;
+}
+
+.controlButton {
+  background-color: unset;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.controlButton:hover {
+  background-color: darkgray;
+}
+
+.button {
+  background-color: #ff8000;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.btn-add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #125fca;
+  border-left: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  height: 24px;
+  width: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  nav h2 {
+    display: none;
+  }
+}
