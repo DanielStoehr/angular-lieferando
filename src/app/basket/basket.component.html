@@ -47,12 +47,28 @@
         </td>
       </tr>
       <tr id="row-minTotal">
-        <th class="font-bold">Mindestbestellwert</th>
-        <td id="minTotal">{{ formatToCurrency(minPrice) }}</td>
+        <th
+          [class.color-error]="!isValidBasket()"
+          [class.color-success]="isValidBasket()"
+          class="font-bold"
+        >
+          Mindestbestellwert
+        </th>
+        <td
+          [class.color-error]="!isValidBasket()"
+          [class.color-success]="isValidBasket()"
+        >
+          {{ formatToCurrency(minPrice) }}
+        </td>
       </tr>
     </table>
     <hr />
-    <button id="btn-submitOrder" class="button w-full" (click)="sendOrder()">
+    <button
+      [disabled]="!isValidBasket()"
+      id="btn-submitOrder"
+      class="button w-full"
+      (click)="sendOrder()"
+    >
       Bestellen
     </button>
   </div>

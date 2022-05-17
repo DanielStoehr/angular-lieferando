@@ -50,4 +50,8 @@ export class BasketComponent implements OnInit {
         alert('Der Auftrag wurde nun in eine Bestellung umgewandelt!');
       });
   }
+
+  isValidBasket() {
+    return this.calcTotal() > this.minPrice;
+  }
 }
